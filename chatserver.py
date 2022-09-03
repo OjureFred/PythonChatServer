@@ -3,6 +3,7 @@ from asyn_chat import asyn_chat
 import socket, asyncore
 
 PORT = 5005
+NAME = 'TestChat'
 
 class ChatServer(dispatcher):
 
@@ -21,6 +22,7 @@ class ChatServer(dispatcher):
 
 if __name__ == '__main__':
     s.ChatServer(PORT)
-        try: asyncore.loop()
+        try:
+            asyncore.loop()
         except KeyboardInterrupt:
-            pass
+            print()
